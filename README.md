@@ -20,6 +20,12 @@ JAR, rather it returns a new Date object.
 
 ## Usage
 
+Leiningen dependency atom:
+
+    [mssngvwls/ring-safe-jar-resource "0.1.0"]
+
+Usage is the same as Ring's `wrap-resource`. For example:
+
 ``` clojure
 (require '[mssngvwls.ring.middleware.safe-jar-resource :as resource])
 
