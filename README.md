@@ -22,7 +22,7 @@ JAR, rather it returns a new Date object.
 
 Leiningen dependency atom:
 
-    [mssngvwls/ring-safe-jar-resource "0.1.0"]
+    [mssngvwls/ring-safe-jar-resource "0.1.1"]
 
 Usage is the same as Ring's `wrap-resource`. For example:
 
