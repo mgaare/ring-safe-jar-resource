@@ -1,4 +1,4 @@
-(defproject mssngvwls/ring-safe-jar-resource "0.1.0"
+(defproject mssngvwls/ring-safe-jar-resource "0.1.1-SNAPSHOT"
   :description "A version of ring's wrap-resources middleware that fixes an in-jar file handle leak problem."
   :license {:name "The MIT License"
             :url "http://opensource.org/licenses/MIT"}
