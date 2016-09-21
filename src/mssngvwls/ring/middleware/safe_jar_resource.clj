@@ -46,12 +46,12 @@
 (defn safe-resource-response
   "File-descriptor-leak safe version of resource-response."
   [path & [{:keys [root loader] :as opts}]]
-  (let [path (-> (str (or root "") "/" path)
-                 (.replace "//" "/")
-                 (.replaceAll "^/" ""))]
+  (let [path' (-> (str (or root "") "/" path)
+                  (.replace "//" "/")
+                  (.replaceAll "^/" ""))]
     (when-let [resource (if loader
-                          (io/resource path loader)
-                          (io/resource path))]
+                          (io/resource path' loader)
+                          (io/resource path'))]
       (if (= "jar" (.getProtocol resource))
         (safe-url-response resource)
         (response/resource-response path opts)))))
